@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState != null) {
             answerImageView.setImageResource(savedInstanceState.getInt("answerImageTag"));
-            answerTextView.setText(savedInstanceState.getChar("textAnswer"));
+            answerTextView.setText(savedInstanceState.getCharSequence("textAnswer"));
+            answerImageView.setTag(savedInstanceState.getInt("answerImageTag"));
         } else {
             answerImageView.setImageResource(R.drawable.question);
             answerImageView.setTag(R.drawable.question);
