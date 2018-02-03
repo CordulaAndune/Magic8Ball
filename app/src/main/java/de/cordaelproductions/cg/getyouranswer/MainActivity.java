@@ -72,6 +72,21 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+        if (savedInstanceState != null) {
+            answerImageView.setImageResource(savedInstanceState.getInt("answerImageTag"));
+            answerTextView.setText(savedInstanceState.getChar("textAnswer"));
+        } else {
+            answerImageView.setImageResource(R.drawable.question);
+            answerImageView.setTag(R.drawable.question);
+        }
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("answerImageTag", (int) answerImageView.getTag());
+        savedInstanceState.putCharSequence("textAnswer", answerTextView.getText());
     }
 
     @Override
@@ -99,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         int randomAnswer = setRandomNumber();
         answerTextView.setText(allAnswers[randomAnswer][0]);
         answerImageView.setImageResource(allAnswers[randomAnswer][1]);
+        answerImageView.setTag(allAnswers[randomAnswer][1]);
         oldAnswer = randomAnswer;
     }
 
