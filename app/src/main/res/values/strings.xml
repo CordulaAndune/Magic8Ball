@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Get Your Answer</string>
+    <string name="picture_of_the_answer">picture of the answer</string>
+    <string name="shake">Shake!!!</string>
+
+    <!-- answers -->
+    <string name="yes">As I see, yes!</string>
+    <string name="no">My reply is no!</string>
+    <string name="dont_count">Don\'t count on it!</string>
+    <string name="source_no">My source say no!</string>
+    <string name="better_not_tell">Better not tell you now…</string>
+    <string name="meh">Meh…</string>
+    <string name="ask_later">Ask again later…</string>
+    <string name="doubt_it">Very doubtful!</string>
+    <string name="without_doubt">Without a doubt!</string>
+    <string name="certain">It is certain!</string>
+    <string name="definitely">Yes definitely!</string>
+    <string name="click_button">Click button!!!</string>
+</resources>

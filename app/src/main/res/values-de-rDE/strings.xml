@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bekomm deine Antwort</string>
+    <string name="picture_of_the_answer">Bild der Antwort</string>
+    <string name="shake">Schütteln!!!</string>
+    <string name="yes">Soweit ich sehen kann, ja!</string>
+    <string name="no">Meine Antwort ist nein!</string>
+    <string name="dont_count">Verlass dich nicht drauf!</string>
+    <string name="source_no">Meine Quellen sagen nein!</string>
+    <string name="better_not_tell">Sag ich jetzt besser nicht…</string>
+    <string name="meh">Meh…</string>
+    <string name="ask_later">Frag später nochmal…</string>
+    <string name="doubt_it">Sehr zweifelhaft!</string>
+    <string name="without_doubt">Ohne jeden Zweifel!</string>
+    <string name="certain">Das ist sicher!</string>
+    <string name="definitely">Ja, definitiv!</string>
+    <string name="click_button">Drück den Button!!!</string>
+</resources>
