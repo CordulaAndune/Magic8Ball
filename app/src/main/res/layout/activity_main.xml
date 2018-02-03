@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/outer_padding"
     android:background="@color/colorBackground"
+    android:padding="@dimen/outer_padding"
     tools:context="de.cordaelproductions.cg.getyouranswer.MainActivity">
 
     <ImageView
@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="@dimen/outer_padding"
-        android:src="@drawable/question"
-        android:scaleType="fitCenter"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/picture_of_the_answer" />
+        android:contentDescription="@string/picture_of_the_answer"
+        android:scaleType="fitCenter"
+        android:src="@drawable/question" />
 
     <TextView
         android:id="@+id/answerText"
@@ -25,6 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/answerImage"
         android:gravity="center"
-        android:text="" />
+        android:text="@string/better_not_tell" />
 
 </RelativeLayout>
