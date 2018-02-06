@@ -4,9 +4,8 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -80,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             answerImageView.setImageResource(R.drawable.question);
             answerImageView.setTag(R.drawable.question);
         }
-
     }
 
     @Override
@@ -134,6 +132,4 @@ public class MainActivity extends AppCompatActivity {
             return randomAnswer;
         }
     }
-
-
 }

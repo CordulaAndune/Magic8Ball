@@ -4,11 +4,10 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.util.Log;
 
 /**
  * Detection of the device shake
- * <p>
+ *
  * based on jasonmcrevnolds.com/?p=388
  * Created by Cordula Gloge on 26/01/2018.
  */
@@ -25,10 +24,6 @@ public class ShakeDetector implements SensorEventListener {
 
     public void setOnShakeListener(OnShakeListener listener) {
         this.mListener = listener;
-    }
-
-    public interface OnShakeListener {
-        void onShake(long count);
     }
 
     @Override
@@ -72,5 +67,9 @@ public class ShakeDetector implements SensorEventListener {
                 }
             }
         }
+    }
+
+    public interface OnShakeListener {
+        void onShake(long count);
     }
 }
