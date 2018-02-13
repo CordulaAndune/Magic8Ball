@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Boolean hasAccelerometer;
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
+    private Vibrator vibrator;
     private TextView answerTextView;
     private ImageView answerImageView;
     private int[][] allAnswers;
@@ -71,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+        // Initialize Vibrator
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+
         if (savedInstanceState != null) {
             answerImageView.setImageResource(savedInstanceState.getInt("answerImageTag"));
             answerTextView.setText(savedInstanceState.getCharSequence("textAnswer"));
@@ -114,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         answerTextView.setText(allAnswers[randomAnswer][0]);
         answerImageView.setImageResource(allAnswers[randomAnswer][1]);
         answerImageView.setTag(allAnswers[randomAnswer][1]);
+        vibrator.vibrate(500);
         oldAnswer = randomAnswer;
     }
 

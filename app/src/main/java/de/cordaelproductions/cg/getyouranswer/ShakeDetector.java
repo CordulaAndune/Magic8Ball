@@ -54,7 +54,7 @@ public class ShakeDetector implements SensorEventListener {
 
                 // ignore shake events too close to each other (500 ms) and mShakeCount > 1.0
                 if (mShakeTimestamp + SHAKE_SLOP_TIME_MS < now) {
-                    if (mShakeCount > 1.0) {
+                    if (mShakeCount > 3.0) {
                         return;
                     }
                 }
@@ -62,7 +62,7 @@ public class ShakeDetector implements SensorEventListener {
                 mShakeTimestamp = now;
                 mShakeCount++;
                 // Execute onShake only one time per shake series
-                if (mShakeCount == 1.0) {
+                if (mShakeCount == 3.0) {
                     mListener.onShake(mShakeCount);
                 }
             }

@@ -3,6 +3,7 @@
     package="de.cordaelproductions.cg.getyouranswer">
 
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
